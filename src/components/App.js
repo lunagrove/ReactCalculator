@@ -38,7 +38,7 @@ function App() {
 
     if (type === "sqrt" || type === "percent" ||
         (type === "memory" && text !== "MR") || type === "sign") {
-      if (operand1 != "" & operand2 != "") {
+      if (operand1 !== "" & operand2 !== "") {
         operand1 = calculateAnswer(operand1, operand2, operator);
         operand2 = "";  
         operator = "";               
@@ -53,19 +53,19 @@ function App() {
           if (lastChar === '.') {
             break;
           }
-          if (operator != "") {
-            if (operand2 != "" & containsDecimal(operand2)) {
+          if (operator !== "") {
+            if (operand2 !== "" & containsDecimal(operand2)) {
               break;
             }
           }
           else {
-            if (operand1 != "" & containsDecimal(operand1)) {
+            if (operand1 !== "" & containsDecimal(operand1)) {
               break;
             }
           }
         }
         let leadingZero = "";
-        if (operator != "") {
+        if (operator !== "") {
           if (text === '.' & operand2 === "") {
             leadingZero = "0";
           }
@@ -89,12 +89,12 @@ function App() {
         displayText = num.toString();
         break;
       case ("operator"):
-        if (operator === "" & operand1 != "") {
+        if (operator === "" & operand1 !== "") {
           operator = text;
           displayText = displayText.toString() + text;
         }
         else {
-          if (operand1 != "" & operand2 != "") {
+          if (operand1 !== "" & operand2 !== "") {
             operand1 = calculateAnswer(operand1, operand2, operator);
             operand2 = "";
             operator = text;
@@ -103,7 +103,7 @@ function App() {
         }
         break;
       case ("enter"):
-        if (operand1 != "" & operand2 != "") {
+        if (operand1 !== "" & operand2 !== "") {
           operand1 = calculateAnswer(operand1, operand2, operator);
           operand2 = "";
           operator = "";
@@ -121,7 +121,7 @@ function App() {
           let lastChar = displayText.charAt(displayText.length - 1);
           displayText = displayText.toString().slice(0, -1);
           if (!isOperator(lastChar)) {
-            if (operand2 != "") {
+            if (operand2 !== "") {
               operand2 = operand2.toString().slice(0, -1);
             }
             else {
@@ -158,7 +158,7 @@ function App() {
       case ("memory"):
         switch(text) {
           case ("MS"):
-            if (operand1 != "") {
+            if (operand1 !== "") {
               (containsDecimal(operand1)) ? memoryValue = parseFloat(operand1)
                                            : memoryValue = parseInt(operand1);
             }
@@ -181,7 +181,7 @@ function App() {
             }
             break;
           case ("M+"):
-            if (operand1 != "") {
+            if (operand1 !== "") {
               if (memoryValue === "") {
                 (containsDecimal(operand1)) ? memoryValue = parseFloat(operand1)
                                             : memoryValue = parseInt(operand1);
@@ -192,7 +192,7 @@ function App() {
             }
             break;
           case ("M-"):
-            if (operand1 != "") {
+            if (operand1 !== "") {
               if (memoryValue === "") {
                 (containsDecimal(operand1)) ? memoryValue = 0 - parseFloat(operand1)
                                             : memoryValue = 0 - parseInt(operand1);
