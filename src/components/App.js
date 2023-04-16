@@ -214,6 +214,9 @@ function App() {
     setOp2(operand2);
     setOpr(operator);
 
+    if (displayText.length > 23) {
+      displayText = displayText.substring(0, 23);
+    }
     setOutputStr(displayText);
     setMemoryOut(memoryValue !== 0 ? memoryValue.toString() : "");
   }
@@ -260,6 +263,10 @@ function App() {
         break;
     }
     currentText = parseFloat(answer).toString();
+
+    if (currentText.length > 23) {
+      currentText = currentText.substring(0, 23);
+    }
     return currentText;
   }
 
