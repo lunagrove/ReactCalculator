@@ -2,35 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 body {
-  background-color: #282c34; 
+  background-color: #282c34;
 }
 
 main {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
   color: white;
-  width: 475px;
-  height: 585px;
-  border: 3px solid white;
+  width: 380px;
+  height: 480px;
+  border: 2px solid white;
   border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .Hdg-text {
@@ -39,9 +24,9 @@ main {
 }
 
 .Display-panel {
-  border: 4px solid grey;
+  border: 3px solid grey;
   border-radius: 10px;
-  height: 65px;
+  height: 45px;
   padding: 0 10px 0px 10px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -52,7 +37,7 @@ main {
 
 .Display-text {
   font-family:'Courier New', Courier, monospace;
-  font-size: 2em;
+  font-size: 1.7em;
   color: lawngreen;
 }
 
@@ -78,20 +63,20 @@ main {
 }
 
 .button-single {
-  width: 70px;
-  height: 70px;
-  font-size: 2em;
-  margin: 3px;
+  width: 55px;
+  height: 55px;
+  font-size: 1.5em;
+  margin: 5px;
   border: 0;
   border-radius: 5px;
   border: outset #fff;
 }
 
 .button-2-col {
-  width: 150px;
-  height: 70px;
-  font-size: 2em;
-  margin: 3px;
+  width: 115px;
+  height: 55px;
+  font-size: 1.5em;
+  margin: 5px;
   border: 0;
   border-radius: 5px;
   border: outset #fff;
@@ -108,22 +93,22 @@ main {
 
 .ac, .seven, .eight, .nine, .multiply, .divide {
   position: absolute;
-  top: 80px;
+  top: 62px;
 }
 
 .c, .four, .five, .six, .add {
   position: absolute;
-  top: 160px;
+  top: 124px;
 }
 
 .sign, .one, .two, .three, .subtract {
   position: absolute;
-  top: 240px;
+  top: 186px;
 }
 
 .percent, .square-root, .zero, .decimal, .equal {
   position: absolute;
-  top: 320px;
+  top: 248px;
 }
 
 .empty, .ac, .c, .sign, .percent {
@@ -133,27 +118,107 @@ main {
 
 .ms, .seven, .four, .one, .square-root {
   position: absolute;
-  left: 80px;
+  left: 62px;
 }
 
 .mc, .eight, .five, .two, .zero {
   position: absolute;
-  left: 160px;
+  left: 124px;
 }
 
 .mr, .nine, .six, .three, .decimal {
   position: absolute;
-  left: 240px;
+  left: 185px;
 }
 
 .m-minus, .multiply, .add, .subtract, .equal {
   position: absolute;
-  left: 320px;
+  left: 248px;
 }
 
 .m-plus, .divide {
   position: absolute;
-  left: 400px;
+  left: 310px;
+}
+
+@media (min-width: 550px){
+
+  main {
+    margin-top: 30px;
+    width: 475px;
+    height: 585px;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Display-panel {
+    border: 4px solid grey;
+    height: 65px;
+  }
+
+  .Display-text {
+    font-size: 2em;
+  }
+
+  .button-single {
+    width: 70px;
+    height: 70px;
+    font-size: 2em;
+    margin: 3px;
+  }
+
+  .button-2-col {
+    width: 150px;
+    height: 70px;
+    font-size: 2em;
+    margin: 3px;
+  }
+
+  .mc, .mr, .ms, .m-plus, .m-minus, .empty {
+    top: 0px;
+  }
+
+  .ac, .seven, .eight, .nine, .multiply, .divide {
+    top: 80px;
+  }
+
+  .c, .four, .five, .six, .add {
+    top: 160px;
+  }
+
+  .sign, .one, .two, .three, .subtract {
+    top: 240px;
+  }
+
+  .percent, .square-root, .zero, .decimal, .equal {
+    top: 320px;
+  }
+
+  .empty, .ac, .c, .sign, .percent {
+    left: 0px;
+  }
+
+  .ms, .seven, .four, .one, .square-root {
+    left: 80px;
+  }
+
+  .mc, .eight, .five, .two, .zero {
+    left: 160px;
+  }
+
+  .mr, .nine, .six, .three, .decimal {
+    left: 240px;
+  }
+
+  .m-minus, .multiply, .add, .subtract, .equal {
+    left: 320px;
+  }
+
+  .m-plus, .divide {
+    left: 400px;
+  }
 }
 
 /* .equal {
